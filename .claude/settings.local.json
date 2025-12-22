@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(pnpm install)",
+      "Bash(node:*)",
+      "Bash(npm --version:*)",
+      "Bash(rm:*)",
+      "Bash(npm cache clean:*)",
+      "Bash(yarn:*)",
+      "Bash(yarn install:*)",
+      "Bash(pnpm --version)",
+      "Bash(pnpm dev:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

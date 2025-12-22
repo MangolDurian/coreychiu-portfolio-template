@@ -7,18 +7,18 @@ export * from './activity'
 
 
 // personal info
-export const name = 'Corey Chiu'
-export const headline = 'Software engineer, Full-Stack web developer, and indie hacker.'
-export const introduction = 'I’m Corey, a software engineer based in Shenzhen, China. I like coding, and building interesting things'
-export const email = 'xxx@gmail.com'
-export const githubUsername = 'iamcorey'
+export const name = 'Your Name'
+export const headline = 'Full-Stack Developer & Software Engineer'
+export const introduction = 'Passionate software engineer focused on building innovative web applications and solving complex problems.'
+export const email = 'your.email@gmail.com'
+export const githubUsername = 'yourgithub'
 
 // about page
-export const aboutMeHeadline = "I'm Corey Chiu, a software engineer based in Shenzhen, China."
+export const aboutMeHeadline = "I'm a passionate software engineer and developer."
 export const aboutParagraphs = [
-  "I love coding. I learned programming when I in college. I wrote my first program in Java when I was 18.",
-  "I have a lot of hobbies, such as travelling, photography, watching movies, music and so on.",
-  "I'm working as a software develop engineer in Shenzhen, China now. And I'm building a lot of side projects in my spare time."
+  "I love coding and creating innovative solutions. I started my programming journey during college and have been passionate about it ever since.",
+  "My interests include web development, mobile apps, and exploring new technologies. I enjoy working on both personal and open-source projects.",
+  "Currently focused on building modern web applications using cutting-edge technologies and best practices."
 ]
 
 
@@ -38,45 +38,15 @@ export type SocialLinkType = {
 
 export const socialLinks: Array<SocialLinkType> = [
   {
-    name: 'X',
-    icon: 'x',
-    href: 'https://x.com/realcoreychiu',
-    external: true
-  },
-  {
-    name: 'Bsky',
-    icon: 'bsky',
-    href: 'https://bsky.app/profile/coreychiu.com',
-    external: true
-  },
-  {
-    name: 'Jike',
-    icon: 'pill',
-    href: 'https://okjk.co/P7c1zU',
-    external: true
-  },
-  {
     name: 'Github',
     icon: 'github',
-    href: 'https://github.com/iamcorey',
+    href: 'https://github.com/yourgithub',
     external: true
   },
   {
-    name: 'Wechat',
-    icon: 'wechat',
-    href: 'https://mp.weixin.qq.com/s/DxnRgqNfgzXIhqj6w_x0dQ',
-    external: true
-  },
-  {
-    name: 'Discord',
-    icon: 'discord',
-    href: 'https://discord.gg/xTxRg3Ej',
-    external: true
-  },
-  {
-    name: 'Ko-fi',
-    icon: 'coffee',
-    href: 'https://ko-fi.com/coreychiu',
+    name: 'Email',
+    icon: 'envelope',
+    href: 'mailto:your.email@gmail.com',
     external: true
   }
 ]
@@ -85,26 +55,19 @@ export const socialLinks: Array<SocialLinkType> = [
 export const techIcons = [
   "typescript",
   "javascript",
-  "supabase",
-  "cloudflare",
-  "java",
-  "oracle",
-  "mysql",
   "react",
   "nodedotjs",
   "nextdotjs",
-  "prisma",
-  "postgresql",
-  "nginx",
-  "vercel",
-  "docker",
+  "tailwindcss",
+  "html5",
+  "css3",
   "git",
   "github",
   "visualstudiocode",
-  "androidstudio",
-  "ios",
-  "apple",
-  "wechat"
+  "docker",
+  "postgresql",
+  "mongodb",
+  "vercel"
 ];
 
 
