@@ -13,17 +13,10 @@ export type CareerItemType = {
   
   export const careerList: Array<CareerItemType> = [
     {
-      company: 'Tech Company Inc.',
-      title: 'Full-Stack Developer',
-      logo: 'code',
-      start: '2022',
+      company: '中科云遥（东莞）科技有限公司',
+      title: 'Java后端开发工程师',
+      logo: 'satellite',
+      start: '2023.06',
       end: 'Present'
-    },
-    {
-      company: 'Digital Solutions Ltd.',
-      title: 'Junior Developer',
-      logo: 'laptopcode',
-      start: '2020',
-      end: '2022'
     }
   ]
