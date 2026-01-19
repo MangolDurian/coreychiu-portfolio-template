@@ -14,9 +14,9 @@ export type CareerItemType = {
   export const careerList: Array<CareerItemType> = [
     {
       company: '中科云遥（东莞）科技有限公司',
-      title: 'Java后端开发工程师',
+      title: 'AI智能体开发工程师 & 后端开发工程师',
       logo: 'satellite',
       start: '2023.06',
-      end: 'Present'
+      end: '至今'
     }
   ]
