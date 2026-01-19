@@ -15,7 +15,7 @@ export type CareerItemType = {
     {
       company: '中科云遥（东莞）科技有限公司',
       title: 'AI智能体开发工程师 & 后端开发工程师',
-      logo: 'satellite',
+      logo: 'bank',
       start: '2023.06',
       end: '至今'
     }

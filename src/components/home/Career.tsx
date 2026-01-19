@@ -3,7 +3,7 @@
 
 import { Briefcase } from '@phosphor-icons/react'
 import { CareerItemType, careerList } from '@/config/infoConfig'
-import { CustomIcon} from '@/components/shared/CustomIcon'
+import Image from 'next/image'
 
 
 
@@ -11,8 +11,14 @@ import { CustomIcon} from '@/components/shared/CustomIcon'
 function CareerItem({ careerItem }: { careerItem: CareerItemType }) {
   return (
     <li className="flex gap-4">
-      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md border border-muted bg-background">
-        <CustomIcon name={careerItem.logo} />
+      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md border border-muted bg-background overflow-hidden">
+        <Image 
+          src="/images/icon/company-logo.png" 
+          alt={careerItem.company}
+          width={40}
+          height={40}
+          className="object-cover"
+        />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>

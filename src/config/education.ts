@@ -15,7 +15,7 @@ export type EducationItemType = {
     {
       school: '东莞理工学院',
       major: '计算机科学与技术',
-      logo: 'graduationcap',
+      logo: 'college',
       start: 'Graduated in',
       end: '2023.06'
     },
