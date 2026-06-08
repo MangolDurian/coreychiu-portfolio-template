@@ -1,5 +1,6 @@
 "use client";
 
+import { Component } from "react";
 import { TweetProps, useTweet } from "react-tweet";
 import { tweetIds } from "@/config/infoConfig";
 
@@ -31,12 +32,29 @@ export const ClientTweetCard = ({
   return <MagicTweet tweet={data} components={components} {...props} />;
 };
 
+class TweetErrorBoundary extends Component<
+  { children: React.ReactNode },
+  { hasError: boolean }
+> {
+  state = { hasError: false };
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  render() {
+    if (this.state.hasError) return null;
+    return this.props.children;
+  }
+}
 
 export const TweetGrid = () => {
   return (
     <div className="grid lg:hidden columns-1 sm:columns-2 lg:columns-3 gap-4">
       {tweetIds.map((id) => (
-        <ClientTweetCard key={id} id={id} className="shadow-xl mb-4 break-inside-avoid"/>
+        <TweetErrorBoundary key={id}>
+          <ClientTweetCard id={id} className="shadow-xl mb-4 break-inside-avoid"/>
+        </TweetErrorBoundary>
       ))}
     </div>
   );

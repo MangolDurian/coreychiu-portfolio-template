@@ -1,4 +1,5 @@
 "use client";
+import { Component } from "react";
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
 
@@ -11,7 +12,21 @@ import {
   TweetSkeleton,
 } from "@/components/home/TweetCard";
 
+class TweetErrorBoundary extends Component<
+  { children: React.ReactNode },
+  { hasError: boolean }
+> {
+  state = { hasError: false };
 
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  render() {
+    if (this.state.hasError) return null;
+    return this.props.children;
+  }
+}
 
 export const ClientTweetCard = ({
   id,
@@ -78,17 +93,23 @@ export function MarqueeVertical() {
     <div className="relative hidden lg:flex h-[1000px] w-full flex-row items-center justify-center overflow-hidden">
       <Marquee pauseOnHover vertical className="[--duration:20s]">
         {firstRow.map((id) => (
-          <ClientTweetCard key={id} id={id} className="shadow-xl mb-4 break-inside-avoid" />
+          <TweetErrorBoundary key={id}>
+            <ClientTweetCard id={id} className="shadow-xl mb-4 break-inside-avoid" />
+          </TweetErrorBoundary>
         ))}
       </Marquee>
       <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
         {secondRow.map((id) => (
-          <ClientTweetCard key={id} id={id} className="shadow-xl mb-4 break-inside-avoid" />
+          <TweetErrorBoundary key={id}>
+            <ClientTweetCard id={id} className="shadow-xl mb-4 break-inside-avoid" />
+          </TweetErrorBoundary>
         ))}
       </Marquee>
       <Marquee pauseOnHover vertical className="[--duration:20s]">
         {thirdRow.map((id) => (
-          <ClientTweetCard key={id} id={id} className="shadow-xl mb-4 break-inside-avoid" />
+          <TweetErrorBoundary key={id}>
+            <ClientTweetCard id={id} className="shadow-xl mb-4 break-inside-avoid" />
+          </TweetErrorBoundary>
         ))}
       </Marquee>
       <div className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-white dark:from-background"></div>
