@@ -11,10 +11,11 @@ import { Favicon } from "favicon-stealer";
 export function ProjectCard({ project, titleAs }: { project: ProjectItemType, titleAs?: keyof JSX.IntrinsicElements }) {
   // 判断是内部链接还是外部链接
   const isInternalLink = project.link.href.startsWith('/')
-  const utmLink = isInternalLink 
-    ? project.link.href 
+  const utmLink = isInternalLink
+    ? project.link.href
     : `https://${project.link.href}?utm_source=${utm_source}`
-  
+  const faviconUrl = isInternalLink ? '' : `https://${project.link.href}`
+
   let Component = titleAs ?? 'h2'
   return (
     <li className='group relative flex flex-col items-start h-full'>
@@ -22,7 +23,7 @@ export function ProjectCard({ project, titleAs }: { project: ProjectItemType, ti
         <div className=''>
           <div className='flex flex-col sm:flex-row justify-center sm:justify-start items-start sm:items-center gap-4'>
             <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full">
-              <Favicon url={project.link.href} src={project.logo} alt={`${project.name} logo`} />
+              <Favicon url={faviconUrl} src={project.logo} alt={`${project.name} logo`} />
             </div>
             <Component className="text-base font-semibold">
               {project.name}
