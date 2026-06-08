@@ -2,7 +2,7 @@
 
 import { ArrowRightIcon, HashIcon } from 'lucide-react'
 import Image from 'next/image'
-import { ArrowUpRight } from '@phosphor-icons/react'
+import { ArrowUpRight, BookOpen } from '@phosphor-icons/react'
 import { ProjectItemType } from '@/config/infoConfig'
 import { utm_source } from '@/config/siteConfig'
 import Link from 'next/link'
@@ -23,7 +23,11 @@ export function ProjectCard({ project, titleAs }: { project: ProjectItemType, ti
         <div className=''>
           <div className='flex flex-col sm:flex-row justify-center sm:justify-start items-start sm:items-center gap-4'>
             <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full">
-              <Favicon url={faviconUrl} src={project.logo} alt={`${project.name} logo`} />
+              {faviconUrl ? (
+                <Favicon url={faviconUrl} src={project.logo} alt={`${project.name} logo`} />
+              ) : (
+                <BookOpen size={24} weight="duotone" />
+              )}
             </div>
             <Component className="text-base font-semibold">
               {project.name}
