@@ -60,7 +60,7 @@ export const socialLinks: Array<SocialLinkType> = [
 
 // https://simpleicons.org/
 export const techIcons = [
-  "java",
+  "openjdk",
   "spring",
   "springboot",
   "elasticsearch",

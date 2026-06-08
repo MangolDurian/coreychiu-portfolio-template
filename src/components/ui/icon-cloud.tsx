@@ -68,7 +68,7 @@ export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
   const { theme } = useTheme();
 
   useEffect(() => {
-    fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
+    fetchSimpleIcons({ slugs: iconSlugs }).then(setData).catch(() => {});
   }, [iconSlugs]);
 
   const renderedIcons = useMemo(() => {
